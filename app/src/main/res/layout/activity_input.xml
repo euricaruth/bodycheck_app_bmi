@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/bg_gradient_header"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_gradient_header"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BodyCheck+"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calculate your BMI easily"
+                            android:textSize="14sp"
+                            android:textColor="@android:color/white"/>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/historyButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_history_24"
+                        app:tint="@android:color/white"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="View History"
+                        android:scaleType="centerInside" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter your name"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/bg_edittext_rounded"
+                android:textColorHint="#999999"
+                android:textColor="#000000"
+                android:layout_marginBottom="16dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_lightpink"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"/>
+                    <EditText
+                        android:id="@+id/weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_input_box"
+                        android:gravity="center"
+                        android:hint="70"
+                        android:textColor="@android:color/black"
+                        android:inputType="number" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KG"
+                        android:textSize="16dp"
+                        android:textColor="#F06292"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_lightblue"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Height"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"/>
+                    <EditText
+                        android:id="@+id/height"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_input_box"
+                        android:gravity="center"
+                        android:hint="175"
+                        android:textColor="@android:color/black"
+                        android:inputType="number" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CM"
+                        android:textSize="16dp"
+                        android:textColor="#40C4FF"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_lightpurple"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"/>
+                    <RadioGroup
+                        android:id="@+id/genderGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="8dp">
+                        <RadioButton
+                            android:id="@+id/male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="Male"/>
+                        <RadioButton
+                            android:id="@+id/female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="Female"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_lightgreen"
+                    android:padding="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"/>
+                    <EditText
+                        android:id="@+id/age"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_input_box"
+                        android:gravity="center"
+                        android:hint="25"
+                        android:textColor="@android:color/black"
+                        android:inputType="number" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YEARS"
+                        android:textSize="16dp"
+                        android:textColor="#00C853"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+            </GridLayout>
+
+            <Button
+                android:id="@+id/calculate_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_gradient_button"
+                android:text="Calculate BMI"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#D6F2FF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/logo2"
+                    android:contentDescription="Logo"/>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BodyCheck+"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/blue"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:paddingVertical="9dp"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/addNewCalculationButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_add_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Add new calculation"
+            app:tint="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <GridLayout
+            android:id="@+id/infoGrid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_card_white"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/weightValue" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_card_white"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/heightValue" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_card_white"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/genderValue" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="59dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_card_white"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/ageValue" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/orange"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </GridLayout>
+
+        <LinearLayout
+            android:id="@+id/bmiCard"
+            android:layout_width="0dp"
+            android:layout_height="320dp"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/bg_card_white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/infoGrid">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BMI Result"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Based on your measurements"
+                android:textColor="#888888"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/indicator2" />
+
+                <ImageView
+                    android:id="@+id/needle"
+                    android:layout_width="130dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="5dp"
+                    android:pivotX="10"
+                    android:pivotY="95"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/needle2" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/bmiScoreValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bmiCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="#888888"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recommendationCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_card_green"
+            app:layout_constraintTop_toBottomOf="@id/bmiCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/recommendationIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="@android:color/white"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/recommendationTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/recommendationText" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
